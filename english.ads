@@ -1,6 +1,9 @@
 !
 !	@(#)english.ads 04/01/06 14:21:56 1.4
 ! $Log$
+! Revision 1.4  2004/09/27 12:53:33  frkochw
+! Copyright Notiz eingefügt.
+!
 ! Revision 1.3  2004/02/26 08:39:40  frkochw
 ! Neue Items im Druckmenue von modell.pro: Scalloping, Farbkodierung und eindeutige Richtungen ncah Wackermann.
 !
@@ -11,6 +14,7 @@
 ! Übergang auf CVS
 !
 !
+Copyright:		GKSS SAR-Wind Program WiSAR, COPYRIGHT (C) 2004 BY GKSS\n\nTHIS PROGRAM IS EXPERIMENTAL AND IS PROVIDED "AS IS" WITHOUT\nREPRESENTATION OF WARRANTY OF ANY KIND, EITHER EXPRESS OR\nIMPLIED. THE ENTIRE RISK AS TO THE QUALITY AND PERFORMANCE OF\nTHE PROGRAM IS WITH THE USER.
 Ausgabeformat:		Outputformat: 
 Hintergrund:		Background: 
 Skalierung:		Scaling: 
@@ -56,12 +60,12 @@ RADARSATDaten:		/net/gmssun3/export/home/RADARSAT/
 RADARSATOutput:		/net/gmssun3/export/home2/ScanSAR/ori
 ASAR_XCA:		/h/frkochw/openimop/ASA_XCA_AXXVIEC*
 ENVISATOutput:		/net/gmssun16/export/home/frkochw/envisat/
-Messungen:		/net/gmssun3/export/home2/frkochw/remo/messungen/messungen 
-ReMoWind:		/net/gmssun3/export/home2/frkochw/remo/remo000xe
-HiRLAMWind:		/net/gmssun3/export/home2/ScanSAR/HIRLAM_DAT/
-HiRLAMWindEs:		/net/gmssun3/export/home2/frkochw/scansar/v
-NOGABWind:		/net/gmssun3/export/home3/APL/
-SCATWind:		/net/gmssun3/export/home3/APL/
+Messungen:		/h/gmssun3-h2/frkochw/remo/messungen/messungen 
+ReMoWind:		/h/gmssun3-h2/frkochw/remo/remo000xe
+HiRLAMWind:		/h/gmssun3-h2/ScanSAR/HIRLAM_DAT/
+HiRLAMWindEs:		/h/gmssun3-h2/frkochw/scansar/v
+NOGABWind:		/h/gmssun3-h3/APL/
+SCATWind:		/h/gmssun3-h3/APL/
 DWDWind:		/net/gmssun16/export/home1/ENVISAT/DWD_DAT/
 Orbit:			Orbit: 
 Richtungeindeutigmachen:Align directions (WK)
