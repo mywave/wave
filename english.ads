@@ -1,6 +1,9 @@
 !
 !	@(#)english.ads 04/01/06 14:21:56 1.4
 ! $Log$
+! Revision 1.2  2004/02/18 16:34:15  frkochw
+! Zusätzliche Items für automatische Richtungsfindung.
+!
 ! Revision 1.1  2004/01/06 14:03:49  frkochw
 ! Übergang auf CVS
 !
@@ -16,6 +19,7 @@ KeineRichtungen:	No directions found
 Mischen:		Merge
 Grau:			Gray
 Spektrale:		Spectral directions
+Scalloping:		Scalloping
 LaengenBreiten:		Longitudes and latitudes
 FFTRichtungen:		FFT directions
 EindeutigeRichtungen:	Unique directions
@@ -56,7 +60,8 @@ NOGABWind:		/net/gmssun3/export/home3/APL/
 SCATWind:		/net/gmssun3/export/home3/APL/
 DWDWind:		/net/gmssun16/export/home1/ENVISAT/DWD_DAT/
 Orbit:			Orbit: 
-Richtungeindeutigmachen:Align directions
+Richtungeindeutigmachen:Align directions (WK)
+Wacker:			Align directions (Chris)
 Modellanzeigen:		Display model
 Tabelleausgeben:	Output table
 Datensichern:		Save data
