@@ -1,6 +1,9 @@
 !
 !	@(#)english.ads 04/01/06 14:21:56 1.4
 ! $Log$
+! Revision 1.5  2004/10/25 12:52:58  frkochw
+! Voreinstellung für die Landseemaske ist jetzt lokal.
+!
 ! Revision 1.4  2004/09/27 12:53:33  frkochw
 ! Copyright Notiz eingefügt.
 !
@@ -70,11 +73,12 @@ DWDWind:		/net/gmssun16/export/home1/ENVISAT/DWD_DAT/
 Orbit:			Orbit: 
 Richtungeindeutigmachen:Align directions (WK)
 Wacker:			Align directions (Chris)
+Druckausrechnen:	Compute air pressure
 Modellanzeigen:		Display model
 Tabelleausgeben:	Output table
 Datensichern:		Save data
 Hintergrundbild:	 background image
-Rechnername:		hostname
+Rechnername:		echo local
 MessungenOutput:	/net/gmssun21/export/home1/Wackerman/DAT/ori/
 CBandModell:		smo5v
 LandSeeDaten:		/h/frkochw/gmt/tmp
