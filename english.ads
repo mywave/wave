@@ -1,6 +1,9 @@
 !
 !	@(#)english.ads 04/01/06 14:21:56 1.4
 ! $Log$
+! Revision 1.7  2005/02/02 15:12:47  frkochw
+! Ocean Weather Windverzeichnis.
+!
 ! Revision 1.6  2004/10/26 16:03:30  frkochw
 ! PolRatio eingefügt.
 !
@@ -73,6 +76,7 @@ HiRLAMWindEs:		/h/gmssun3-h2/frkochw/scansar/v
 NOGABWind:		/h/gmssun3-h3/APL/
 SCATWind:		/h/gmssun3-h3/APL/
 DWDWind:		/net/gmssun16/export/home1/ENVISAT/DWD_DAT/
+OWWind:			/h/frkochw/tmp/jh/
 Orbit:			Orbit: 
 Richtungeindeutigmachen:Align directions (WK)
 Wacker:			Align directions (Chris)
