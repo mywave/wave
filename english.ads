@@ -1,6 +1,9 @@
 !
 !	@(#)english.ads 04/01/06 14:21:56 1.4
 ! $Log$
+! Revision 1.6  2004/10/26 16:03:30  frkochw
+! PolRatio eingefügt.
+!
 ! Revision 1.5  2004/10/25 12:52:58  frkochw
 ! Voreinstellung für die Landseemaske ist jetzt lokal.
 !
@@ -83,3 +86,4 @@ MessungenOutput:	/net/gmssun21/export/home1/Wackerman/DAT/ori/
 CBandModell:		smo5v
 LandSeeDaten:		/h/frkochw/gmt/tmp
 LandSeeDatenErstellen:	rsh gmssun10 cd gmt;cdf.x 
+PolRatio:		model1
