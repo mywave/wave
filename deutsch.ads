@@ -1,6 +1,9 @@
 !
 !	@(#)deutsch.ads 04/01/06 14:21:20 1.4
 ! $Log$
+! Revision 1.9  2005/03/04 09:57:43  frkochw
+! Einbinden von neuronalen Netzen zur Windbestimmung.
+!
 ! Revision 1.8  2005/02/02 15:12:46  frkochw
 ! Ocean Weather Windverzeichnis.
 !
@@ -88,6 +91,8 @@ Hintergrundbild:	 Hintergrundbild
 Rechnername:		echo local
 MessungenOutput:	/net/gmssun21/export/home1/Wackerman/DAT/ori/
 CBandModell:		smo5v
+NN:			/h/frkochw/openimop/NN_beta/14x12x10x8x6_188.9.net
+NNprog:			/h/frkochw/openimop/NN_beta/calc2v_NN
 LandSeeDaten:		/h/frkochw/gmt/tmp
 LandSeeDatenErstellen:	rsh gmssun10 cd gmt;cdf.x
 PolRatio:		model1
