@@ -1,6 +1,9 @@
 !
 !	@(#)english.ads 04/01/06 14:21:56 1.4
 ! $Log$
+! Revision 1.3  2004/02/26 08:39:40  frkochw
+! Neue Items im Druckmenue von modell.pro: Scalloping, Farbkodierung und eindeutige Richtungen ncah Wackermann.
+!
 ! Revision 1.2  2004/02/18 16:34:15  frkochw
 ! Zusätzliche Items für automatische Richtungsfindung.
 !
@@ -20,6 +23,7 @@ Mischen:		Merge
 Grau:			Gray
 Spektrale:		Spectral directions
 Scalloping:		Scalloping
+Farbkodierung:		Colorcoding
 LaengenBreiten:		Longitudes and latitudes
 FFTRichtungen:		FFT directions
 EindeutigeRichtungen:	Unique directions
