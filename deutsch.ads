@@ -1,6 +1,9 @@
 !
 !	@(#)deutsch.ads 04/01/06 14:21:20 1.4
 ! $Log$
+! Revision 1.11  2007/01/23 15:27:07  frkochw
+! Neue Windverzeichnisse für die Routine.
+!
 ! Revision 1.10  2007/01/23 15:23:52  frkochw
 ! Routineversion.
 !
@@ -87,8 +90,8 @@ NOGABWind:		/h/gmssun3-h3/APL/
 SCATWind:		/h/gmssun3-h3/APL/
 DWDWind:		/net/gmssun16/export/home1/ENVISAT/DWD_DAT/
 OWWind:			/h/frkochw/tmp/jh/
-MELWind:		/h/gmssun21-h1/NORDSEE/MEL/MEL_data/
-DWDLMWind:		/h/gmssun21-h1/DWD-DAT/DWD_LM_wind/
+MELWind:		/h/ksddata/nogab/
+DWDLMWind:		/h/ksddata/dwd/
 Orbit:			Orbit: 
 Richtungeindeutigmachen:Richtungen eindeutig machen (WK)
 Wacker:			Richtungen eindeutig machen (Chris)
