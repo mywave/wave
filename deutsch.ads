@@ -1,6 +1,9 @@
 !
 !	@(#)deutsch.ads 04/01/06 14:21:20 1.4
 ! $Log$
+! Revision 1.10  2007/01/23 15:23:52  frkochw
+! Routineversion.
+!
 ! Revision 1.9  2005/03/04 09:57:43  frkochw
 ! Einbinden von neuronalen Netzen zur Windbestimmung.
 !
@@ -63,14 +66,18 @@ Gegenwind:		Gegenwind
 Querwind:		Querwind 
 anpat1:			/h/frkochw/openimop/anpat1.dat
 anpat2:			/h/frkochw/openimop/anpat2.dat
+anpat2b:		/h/frkochw/openimop/anpat2b.dat
+anpat2c:		/h/frkochw/openimop/anpat2c.dat
 anpat3:			/h/frkochw/openimop/anpat3.dat
+anpat3b:		/h/frkochw/openimop/anpat3b.dat
+anpat3c:		/h/frkochw/openimop/anpat3c.dat
 anpat4:			/h/frkochw/openimop/anpat4.dat
 anpat5:			/h/frkochw/openimop/anpat5.dat
 powerloss1:		/h/frkochw/openimop/poloco1.dat
 powerloss2:		/h/frkochw/openimop/poloco21.dat
 RADARSATDaten:		/net/gmssun3/export/home/RADARSAT/
 RADARSATOutput:		/net/gmssun3/export/home2/ScanSAR/ori
-ASAR_XCA:		/h/frkochw/openimop/ASA_XCA_AXXIEC*
+ASAR_XCA:		/h/frkochw/xca/ASA_XCA_AX*
 ENVISATOutput:		/net/gmssun16/export/home/frkochw/envisat/
 Messungen:		/h/gmssun3-h2/frkochw/remo/messungen/messungen 
 ReMoWind:		/h/gmssun3-h2/frkochw/remo/remo000xe
@@ -80,6 +87,8 @@ NOGABWind:		/h/gmssun3-h3/APL/
 SCATWind:		/h/gmssun3-h3/APL/
 DWDWind:		/net/gmssun16/export/home1/ENVISAT/DWD_DAT/
 OWWind:			/h/frkochw/tmp/jh/
+MELWind:		/h/gmssun21-h1/NORDSEE/MEL/MEL_data/
+DWDLMWind:		/h/gmssun21-h1/DWD-DAT/DWD_LM_wind/
 Orbit:			Orbit: 
 Richtungeindeutigmachen:Richtungen eindeutig machen (WK)
 Wacker:			Richtungen eindeutig machen (Chris)
@@ -91,7 +100,7 @@ Hintergrundbild:	 Hintergrundbild
 Rechnername:		echo local
 MessungenOutput:	/net/gmssun21/export/home1/Wackerman/DAT/ori/
 CBandModell:		smo5v
-NN:			/h/frkochw/openimop/NN_beta/14x12x10x8x6_188.9.net
+NN:			/h/frkochw/openimop/NN_beta/16x14x12x10x8_51.0.net
 NNprog:			/h/frkochw/openimop/NN_beta/calc2v_NN
 LandSeeDaten:		/h/frkochw/gmt/tmp
 LandSeeDatenErstellen:	rsh gmssun10 cd gmt;cdf.x
