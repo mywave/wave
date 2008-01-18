@@ -1,6 +1,9 @@
 !
 !	@(#)english.ads 04/01/06 14:21:56 1.4
 ! $Log$
+! Revision 2.1  2008/01/18 09:22:44  frkochw
+! Routineversion.
+!
 ! Revision 1.8  2005/03/04 09:57:44  frkochw
 ! Einbinden von neuronalen Netzen zur Windbestimmung.
 !

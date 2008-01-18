@@ -1,6 +1,9 @@
 !
 !	@(#)deutsch.ads 04/01/06 14:21:20 1.4
 ! $Log$
+! Revision 2.1  2008/01/18 09:22:44  frkochw
+! Routineversion.
+!
 ! Revision 1.11  2007/01/23 15:27:07  frkochw
 ! Neue Windverzeichnisse für die Routine.
 !
