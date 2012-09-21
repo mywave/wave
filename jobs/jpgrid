@@ -1,0 +1,30 @@
+#!/bin/ksh
+#
+#==>  WAM post-processing pgrid
+#
+#     Arno Behrens (May 2012)
+#
+#PBS -S /bin/sh
+#PBS -N pgrid
+#PBS -j oe
+#PBS -l select=1:ncpus=1
+#PBS -l place=scatter
+#PBS -q ksd-test
+#
+set -k
+WAMDIR=/data/behrens/mywave
+WORK=/data/behrens/mywave/workdir
+cd ${WORK}/tempsg
+#
+cp ${WAMDIR}/const/Grid_User .
+cp ${WAMDIR}/abs/pgrid pgrid.exe
+#
+./pgrid.exe
+mv Grid_Prot ${WAMDIR}/dayfiles/pgrid_prot_c
+rm Grid_User pgrid.exe
+#
+# ===================================================================
+#  GRID FILES HAVE BEEN CREATED AND SAVED.
+#  END OF JOB PGRID.
+# ===================================================================
+#

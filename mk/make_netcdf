@@ -1,0 +1,22 @@
+#!/bin/sh
+set -ex
+. ${0%/*}/.dirset
+path_o=${PRODADMDIR}/obj
+path_f=${PRODADMDIR}/src/print
+#NETCDF=/data/behrens/wam_redu/NETCDF
+NETCDF=/opt/intel/netcdf/include
+
+modfile="wam_netcdf_module make_netcdf"
+
+cd $path_o
+cp ${NETCDF}/netcdf.inc .
+cp ${NETCDF}/netcdf.mod .
+cp ${NETCDF}/typesizes.mod .
+
+for code in $modfile
+do
+   rm -f ${code}.f90 ${code}.o
+   cp ${path_f}/${code}.f90 ${path_o}/${code}.f90
+   mpif90 -ccl ifort -c ${code}.f90 -L/usr/lib64
+   rm -f ${code}.f90
+done

@@ -1,0 +1,5 @@
+#/bin/ksh &
+#++
+PRODADMDIR=/data/behrens/mywave
+NETCDF=/opt/intel/netcdf/include
+export PRODADMDIR

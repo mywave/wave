@@ -1,0 +1,113 @@
+&WAM_NAMELIST
+ model_area = 'GSM',  !GWAM Global Wave Model
+ COARSE_GRID_RUN = T,
+ FINE_GRID_RUN   = F,
+ START_DATE = '%cymdg%0000'
+ END_DATE   = '%cymdgpv%0000'
+ COLDSTART  =  %coldstart%,
+ IOPTI = 1,
+ FETCH = 150000,
+ SPHERICAL_RUN = T,
+ SHALLOW_RUN   = T,
+ ITEST = 5,
+ PROPAGATION_TIMESTEP = 15,
+ PROPAGATION_TIMESTEP_UNIT = 'M',
+ SOURCE_TIMESTEP = 15,
+ SOURCE_TIMESTEP_UNIT = 'M',
+ RESTART_SAVE_TIMESTEP = %hinc%,       
+ RESTART_SAVE_TIMESTEP_UNIT = 'H',
+ RESTART_FILE_NAME          = '%gwam_dir%BLS', 
+ COARSE_OUTPUT_FILE_NAME    = '%gwam_dir%C01',   
+ PARAMETER_OUTPUT_FILE_NAME = '%gwam_dir%MAP',
+ SPECTRA_OUTPUT_FILE_NAME   = '%gwam_dir%OUT',
+
+ WIND_INPUT_TIMESTEP =  %hinc%,
+ WIND_INPUT_TIMESTEP_UNIT  = 'H', 	
+ WIND_OUTPUT_TIMESTEP = %hinc%,
+ WIND_OUTPUT_TIMESTEP_UNIT = 'H',
+ WIND_INPUT_FILE_NAME = '%wind_dir%w%cymdg%',
+ ICE_INPUT_FILE_NAME  = '%wind_dir%t%cymdg%',
+ PARAMETER_OUTPUT_TIMESTEP = %hinc%,
+ SPECTRA_OUTPUT_TIMESTEP   = %hinc%,
+ OUTPUT_FILE_SAVE_TIMESTEP = %hinc%,
+ hours_2d_spectra  = 12,
+ spectral_code = 0,
+ FFLAG_P = T,  !T  32   WIND SPEED U10 ( 0.1 METRES/SECOND )                                                                 
+           T,  !T  31   WIND DIRECTION ( DEGREE FROM NORTH TO )                                               
+           T,  !T  120  FRICTION VELOCITY ( 0.01 METRES/SECOND )                                              
+           F,  !T  0    DRAG COEFFICIENT ( 0.1 *PROMILLE )                                                    
+           F,  !F  0    WATER DEPTH (METRES) (DEEPER THAN 999M ARE PRINTED AS 999)                            
+           F,  !F  0    DUMMY                                                                                 
+           F,  !F  0    CURRENT SPEED ( 0.01 METRES/SECOND )                                                  
+           F,  !F  0    CURRENT DIRECTION ( DEGREE FROM NORTH TO )                                            
+           T,  !T  100  SIGNIFICANT WAVE HEIGHT ( 0.1 METRES )                                                
+           T,  !T  9    WAVE PEAK PERIOD ( 0.1 SECONDS )                                                      
+           T,  !T  10   WAVE MEAN PERIOD ( 0.1 SECONDS )                                                       
+           T,  !T  17   WAVE TM1 PERIOD ( 0.1 SECONDS )                                                       
+           T,  !T  18   WAVE TM2 PERIOD ( 0.1 SECONDS )                                                       
+           T,  !T  4    WAVE DIRECTION ( DEGREE FROM NORTH TO )                                               
+           T,  !T  19   DIRECTIONAL SPREAD ( DEGREES )                                                        
+           F,  !T  0    NORMALISED WAVE STRESS ( % )                                                          
+           T,  !T  102  SEA SIGNIFICANT WAVE HEIGHT ( 0.1 METRES )                                            
+           T,  !T  8    SEA PEAK PERIOD ( 0.1 SECONDS )                                                       
+           T,  !T  103  SEA MEAN PERIOD ( 0.1 SECONDS )                                                       
+           F,  !T  0    SEA TM1 PERIOD ( 0.1 SECONDS )                                                        
+           F,  !T  0    SEA TM2 PERIOD ( 0.1 SECONDS )                                                        
+           T,  !T  101  SEA DIRECTION ( DEGREE FROM NORTH TO )                                                
+           F,  !T  0    SEA DIRECTIONAL SPREAD ( DEGREES )                                                    
+           F,  !F  0    DUMMY                                                                                 
+           T,  !T  105  SWELL SIGNIFICANT WAVE HEIGHT ( 0.1 METRES )                                          
+           T,  !T  7    SWELL PEAK PERIOD ( 0.1 SECONDS )                                                     
+           T,  !T  106  SWELL MEAN PERIOD ( 0.1 SECONDS )                                                     
+           F,  !T  0    SWELL TM1 PERIOD ( 0.1 SECONDS )                                                      
+           F,  !T  0    SWELL TM2 PERIOD ( 0.1 SECONDS )                                                      
+           T,  !T  104  SWELL DIRECTION ( DEGREE FROM NORTH TO )                                              
+           F,  !T  0    SWELL DIRECTIONAL SPREAD ( DEGREES )                                                  
+           F,  !F  0    DUMMY                                                                                 
+ PFLAG_P = T,  !T WIND SPEED U10 ( 0.1 METRES/SECOND )                                                             
+           F,  !T WIND DIRECTION ( DEGREE FROM NORTH TO )                                             
+           F,  !T FRICTION VELOCITY ( 0.01 METRES/SECOND )                                            
+           F,  !T DRAG COEFFICIENT ( 0.1 *PROMILLE )                                                  
+           F,  !F WATER DEPTH (METRES) (DEEPER THAN 999M ARE PRINTED AS 999                           
+           F,  !F DUMMY                                                                               
+           F,  !F CURRENT SPEED ( 0.01 METRES/SECOND )                                                
+           F,  !F CURRENT DIRECTION ( DEGREE FROM NORTH TO )                                          
+           T,  !T SIGNIFICANT WAVE HEIGHT ( 0.1 METRES )                                              
+           F,  !T WAVE PEAK PERIOD ( 0.1 SECONDS )                                                    
+           F,  !T WAVE MEAN PERIOD ( 0.1 SECONDS )                                                    
+           F,  !T WAVE TM1 PERIOD ( 0.1 SECONDS )                                                     
+           F,  !T WAVE TM2 PERIOD ( 0.1 SECONDS )                                                     
+           F,  !T WAVE DIRECTION ( DEGREE FROM NORTH TO )                                             
+           F,  !T DIRECTIONAL SPREAD ( DEGREES )                                                      
+           F,  !T NORMALISED WAVE STRESS ( % )                                                        
+           F,  !T SEA SIGNIFICANT WAVE HEIGHT ( 0.1 METRES )                                          
+           F,  !T SEA PEAK PERIOD ( 0.1 SECONDS )                                                     
+           F,  !T SEA MEAN PERIOD ( 0.1 SECONDS )                                                     
+           F,  !T SEA TM1 PERIOD ( 0.1 SECONDS )                                                      
+           F,  !T SEA TM2 PERIOD ( 0.1 SECONDS )                                                      
+           F,  !T SEA DIRECTION ( DEGREE FROM NORTH TO )                                              
+           F,  !T SEA DIRECTIONAL SPREAD ( DEGREES )                                                  
+           F,  !F DUMMY                                                                               
+           F,  !T SWELL SIGNIFICANT WAVE HEIGHT ( 0.1 METRES )                                        
+           F,  !T SWELL PEAK PERIOD ( 0.1 SECONDS )                                                   
+           F,  !T SWELL MEAN PERIOD ( 0.1 SECONDS )                                                   
+           F,  !T SWELL TM1 PERIOD ( 0.1 SECONDS )                                                    
+           F,  !T SWELL TM2 PERIOD ( 0.1 SECONDS )                                                    
+           F,  !T SWELL DIRECTION ( DEGREE FROM NORTH TO )                                            
+           F,  !T SWELL DIRECTIONAL SPREAD ( DEGREES )                                                
+           F,  !F DUMMY                                                                               
+ ready_file_flag = T,
+ ready_file_directory = '%wind_dir%',
+ ready_outfile_flag = T,
+ ready_outfile_directory = '%gwam_dir%ready',
+ PREPROC_OUTPUT_FILE_NAME = 'Grid_info_GWAM',
+ assimilation_flag        =  %assi_flag%,
+ assimilation_start_date  = '%assi_start%0000',
+ assimilation_end_date    = '%assi_stop%0000',
+ assimilation_time_step   = 3,
+ observation_filename     = '%wind_dir%OBS'
+ first_guess_output_flag  = T,
+ first_guess_ip_filename  = 'MAPFG',
+ first_guess_sp_filename  = 'OUTFG'
+/END
+ 

@@ -1,0 +1,30 @@
+#!/bin/sh
+#
+#==>  WAM post-processing ptime
+#
+#     Arno Behrens (May 20121)
+#
+#PBS -S /bin/sh
+#PBS -N ptime
+#PBS -j oe
+#PBS -l select=1:ncpus=1:mem=400mb
+#PBS -l place=scatter
+#PBS -q ksd-test
+#
+set -k
+WAMDIR=/data/behrens/mywave
+WORK=/data/behrens/mywave/workdir
+cd ${WORK}/tempsg
+#cp ${WAMDIR}/const/Time_User_nml Time_User
+cp ${WAMDIR}/const/Time_User .
+cp ${WAMDIR}/abs/ptime ptime.exe
+#
+./ptime.exe
+mv Time_Prot ${WAMDIR}/dayfiles/ptime_prot_c
+rm Time_User ptime.exe 
+#
+# ===================================================================
+#  GRID FILES HAVE BEEN CREATED AND SAVED.
+#  END OF JOB PTIME.
+# ===================================================================
+#

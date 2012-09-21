@@ -1,0 +1,105 @@
+C                                                                               
+C            INPUT OF PROGRAM PRINT_GRID_FILE                                    
+C            ================================  
+C                                                                               
+C        USER INFORMATION IS BEING READ BY SUB. READ__WAM_USER
+C        WITH THE PRESUMPTIONS THAT:
+C         1. EVERY LINE STARTING WITH 'C' OR 'c' IS A COMMENT LINE
+C         2. VALUES ARE PUT IN BELOW POSITIONS INDICATED WITH '-'
+C         3. IF VALUES ARE NOT SPECIFIED DEFAULT VALUES WILL BE USED.
+C         4. VALUES MARKED BY C => MUST BE DEFINED BY THE USER.
+C         5. DEFAULT VALUES ARE DEFINED BY SUB. CLEAR_PRINT_USER_MODULE
+C            CONTAINED IN WAM_PRINT_USER_MODULE.
+C
+C ------------------------------------------------------------------------------
+C
+C           **** PERIOD OF MODEL RUN ****
+C
+C =>    CDATEA  START DATE OF  RUN  (YYYYMMDDHHMMSS)
+C =>    CDATEE  END   DATE OF  RUN  (YYYYMMDDHHMMSS)
+C       IDELDO  OUTPUT TIME STEP                       DEFAULT 1
+C       U       TIME UNIT: M OR m MINUTE; H OR h HOUR; DEFAULT H.
+C                                                                               
+C        CDATEA          CDATEE   IDELDO  U                                           
+C--------------  --------------  -------  -                                            
+ 19780908060000  19780908060000        3  H                                         
+C                                                                               
+C ------------------------------------------------------------------------------
+C
+C           **** OUTPUT AT GIVE TIMES ****
+C
+C   SPECIFY A LIST WITH UP TO 20 DATES (YYYYMMDDHHMMSS) AND CLOSE THE
+C   LIST BY 'END'. IF THE LIST INCLUDES ANYTHING ELSE THAN 'END'
+C   THE OUTPUT TIME STEPS IDELINT AND IDELSPT SPECIFIED ABOVE ARE IGNORED.
+C
+CYYYYMMDDHHMMSS  YYYYMMDDHHMMSS  YYYYMMDDHHMMSS  YYYYMMDDHHMMSS
+C--------------  --------------  --------------  --------------
+C 19780906060000  19780906090000  19780906120000  19780906180000  
+C 19780907000000  19780907060000  19780907120000  19780907180000
+C 19780908000000  19780908060000                                                                             
+C                                                                               
+ END      THE INPUT LIST HAS TO BE CLOSED BY THIS END LINE                                                      
+C                                                                               
+C ------------------------------------------------------------------------------
+C                                                                               
+C           **** PARAMETERS TO BE PRINTED ****                                      
+C                                                                               
+C      P  PRINT OUTPUT:    N  OR n : NO OUTPUT ,      DEFAULT Y : OUTPUT
+C                                                                               
+CP                                   P
+C-                                   -
+ N   WIND SPEED U10                  N   WIND DIRECTION
+ N   FRICTION VELOCITY               N   DRAG COEFFICIENT
+ N   WATER DEPTH                     N   DUMMY
+ N   CURRENT SPEED                   N   CURRENT DIRECTION
+C
+ Y   SIGNIFICANT WAVE HEIGHT         N   WAVE PEAK PERIOD
+ N   WAVE MEAN PERIOD                N   WAVE TM1 PERIOD
+ N   WAVE TM2 PERIOD                 N   WAVE DIRECTION
+ N   DIRECTIONAL SPREAD              N   NORMALISED WAVE STRESS
+C
+ N   SEA SIGNIFICANT WAVE HEIGHT     N   SEA PEAK PERIOD
+ N   SEA MEAN PERIOD                 N   SEA TM1 PERIOD
+ N   SEA TM2 PERIOD                  N   SEA DIRECTION
+ N   SEA DIRECTIONAL SPREAD          N   DUMMY
+C
+ N   SWELL SIGNIFICANT WAVE HEIGHT   N   SWELL PEAK PERIOD
+ N   SWELL MEAN PERIOD               N   SWELL TM1 PERIOD
+ N   SWELL TM2 PERIOD                N   SWELL DIRECTION
+ N   SWELL DIRECTIONAL SPREAD        N   DUMMY
+C
+C ------------------------------------------------------------------------------
+C
+C   REGULAR  INTEROPLATE REDUCED TO REGULAR GRID:
+C            N  OR n :  NO INTERPOLATION      DEFAULT: Y: INTERPOLATION
+C
+C   REGULAR
+C----------
+          Y
+C
+C ------------------------------------------------------------------------------
+C                                                                               
+C                 **** INPUT DATA FILE ****
+C                                                                               
+C  =>   CDATEF  DATE OF FIRST FILE NAME (YYYYMMDDHHMMSS)                      
+C       IDELFI  FILE TIME STEP (IF <=0 A NEW FILE IS NOT USED);  DEFAULT 24                                
+C       U       TIME UNIT: M OR m MINUTE; H OR h HOUR;           DEFAULT H.
+C                                                                               
+C        CDATEF   IDELFI  U                                                   
+C--------------  -------  -                                                  
+ 19780908060000        3  H                                                 
+C                                                                               
+C           **** INPUT AND OUTPUT FILE NAMES ****    
+C
+C    THE PROGRAM OPENS AUTOMATICALLY THE FOLLOWING FILES, WHICH ARE 
+C    DEFINED IN "PRINT_GRID_FILE.f90":
+C
+C       FILE05 = 'Grid_User' TO READ THIS INPUT FILE.
+C       FILE06 = 'Grid_Prot' TO WRITE A PROTOCOL.
+C    
+C  => INTEGRATED DATA FILE IDENTIFIER (UNIT = IU01, UNFORMATED INPUT)
+C---------+---------+---------+---------+---------+---------+---------+         
+ ../MAP
+C ------------------------------------------------------------------------------
+C         END OF USER INPUT PROGRAM PRINT_GRID.                                      
+C ------------------------------------------------------------------------------

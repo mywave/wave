@@ -1,0 +1,34 @@
+#!/bin/sh
+#
+#==>  WAM model run
+#
+#     Arno Behrens (May 2012)
+#
+#PBS -S /bin/sh
+#PBS -N wam
+#PBS -j oe
+#PBS -l select=1:ncpus=4
+#PBS -l place=scatter
+#PBS -q ksd-test
+#
+set +k
+ulimit -s unlimited
+cdir=/data/behrens/mywave
+work=/data/behrens/mywave/workdir
+#
+cd ${work}/tempsg
+cp ${cdir}/const/WAM_User .
+#cp ${cdir}/const/ICE_INPUT.DAT .
+#cp ${cdir}/const/CURRCAT.DAT .
+#cp ${cdir}/const/OBS* .
+cp ${work}/work/Grid_info_SWAMP .
+cp ${cdir}/const/WIND_INPUT.DAT .
+#
+cp ${cdir}/abs/wam wam.exe
+/opt/scali/bin/mpirun -np 4 -machinefile $PBS_NODEFILE wam.exe
+#
+cp logfile.0 ${cdir}/dayfiles/wam_prot_c
+mv BLS* MAP* OUT* RAD* C* ..
+#rm wam.exe WAM_User WAM_Prot w2* log* Grid_info_SWAMP
+#
+exit 0

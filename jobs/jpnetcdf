@@ -1,0 +1,31 @@
+#!/bin/ksh
+#
+#==>  WAM post-processing pnetcdf
+#
+#     Arno Behrens (May 2012)
+#
+#PBS -S /bin/sh
+#PBS -N pnetcdf
+#PBS -j oe
+#PBS -l select=1:ncpus=1
+#PBS -l place=scatter
+#PBS -q ksd-test
+#
+set -k
+WAMDIR=/data/behrens/mywave
+WORK=/data/behrens/mywave/workdir
+cd ${WORK}/tempsg
+#
+cp ${WAMDIR}/const/nlnetcdf NETCDF_User
+cp ${WAMDIR}/abs/pnetcdf pnetcdf.exe
+#
+./pnetcdf.exe
+mv pnetcdf_prot ${WAMDIR}/dayfiles/pnetcdf_prot_c
+mv WAVE* ..
+rm NETCDF_User pnetcdf.exe
+#
+# ===================================================================
+#  NETCDF FILES HAVE BEEN CREATED AND SAVED.
+#  END OF JOB PNETCDF.
+# ===================================================================
+#
