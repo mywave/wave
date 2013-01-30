@@ -823,6 +823,11 @@ IF (AMOWEP.NE.WEST_C .OR. AMOEAP.NE.EAST_C .OR.                                &
    WRITE (IU06,*) '*                                                      *'
    WRITE (IU06,*) '*              THE PROGRAM ABORTS                      *'
    WRITE (IU06,*) '********************************************************'
+   WRITE (IU06,*) 'AMOWEP.NE.WEST_C :',AMOWEP,WEST_C 
+   WRITE (IU06,*) 'AMOEAP.NE.EAST_C :',AMOEAP,EAST_C 
+   WRITE (IU06,*) 'AMONOP.NE.NORTH_C:',AMONOP,NORTH_C
+   WRITE (IU06,*) 'AMOSOP.NE.SOUTH_C:',AMOSOP,SOUTH_C
+   WRITE (IU06,*) '********************************************************'
    CALL ABORT1
 END IF
 

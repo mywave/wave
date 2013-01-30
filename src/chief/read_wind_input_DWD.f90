@@ -128,8 +128,9 @@ else
 endif
 LEN = LEN_TRIM(FILE01)
 OPEN (UNIT=IU01,FILE=FILE01(1:LEN),FORM='FORMATTED',STATUS='OLD',IOSTAT=IOS)
-READ (IU01, '(6F10.5,3I4)', IOSTAT=IOS) SOUTH, NORTH, WEST, EAST,             &
-&                                       D_LON, D_LAT, N_LON, N_LAT, ICODE
+READ (IU01,*, IOSTAT=IOS) SOUTH,NORTH,WEST,EAST,D_LON,D_LAT,N_LON,N_LAT,ICODE
+!READ (IU01, '(6F10.5,3I4)', IOSTAT=IOS) SOUTH, NORTH, WEST, EAST,             &
+!&                                       D_LON, D_LAT, N_LON, N_LAT, ICODE
 IF (IOS.NE.0) THEN
    WRITE (IU06,*) 'FORMATTED READING FROM FILE ', FILE01(1:LEN), ' FAILED'
    WRITE (IU06,*) ' ****************************************************'

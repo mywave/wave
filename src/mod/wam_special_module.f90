@@ -99,9 +99,11 @@ if (ytrans_in /= '   ') then
    if (my_cart_id == 0) then
       nwait   = 0
       lzexist = .false.
-      if (area=='gsm'.or.area=='GSM') then
+      if (area=='GSM'.or.area=='GWM') then
          call create_ready_file_name (ifcst, 'GME_', filename)
-      else if (area=='esm'.or.area=='ESM') then
+      else if (area=='ESM'.or.area=='EWM') then
+         call create_ready_file_name (ifcst, 'LMA_', filename)
+      else if (area=='KSM'.or.area=='KWM') then
          call create_ready_file_name (ifcst, 'LMA_', filename)
       else
          call create_ready_file_name (ifcst, area//'_', filename)

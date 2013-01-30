@@ -1,5 +1,4 @@
 PROGRAM PRINT_SPECTRA_FILE
-
 ! ---------------------------------------------------------------------------- !
 !                                                                              !
 !     PRINT_SPECTRA_FILE - PRINTS SPECTRA FROM WAM-MODEL OUTPUT.               !
@@ -35,7 +34,6 @@ PROGRAM PRINT_SPECTRA_FILE
 !                                                                              !
 !      EXTERNALS.                                                              !
 !     -----------                                                              !
-
 USE WAM_COORDINATE_MODULE
 
 USE WAM_GENERAL_MODULE, ONLY:  &
@@ -74,7 +72,7 @@ IMPLICIT NONE
 !     LOCAL VARIABLES.                                                         !
 !     ----------------                                                         !
 
-INTEGER     :: IFAIL           !! OPEN ERROR
+INTEGER     :: IFAIL,NFAIL     !! OPEN ERROR
 LOGICAL     :: IEOF            !! END OF FILE ENCOUNTED IN SUB. READ_SPECTRUM
 
 INTEGER            :: I
@@ -111,13 +109,16 @@ END IF
 !                                                                              !
 !     2. LOOP OVER INPUT FILES.                                                !
 !        ----------------------                                                !
-
+NFAIL=0
 FILES: DO
 
 !     2.1 FETCH FILE.                                                          !
 
    CALL OPEN_FILE (IU06, IU01, FILE01, CDTFILE, 'OLD', IFAIL)
-   IF (IFAIL.NE.0) STOP
+!   IF (IFAIL.NE.0) STOP
+   
+! tbruns 26.01.2012
+   IF (IFAIL.EQ.0) THEN
 
 !     2.2  LOOP OVER OUTPUT TIMES.                                             !
 
@@ -129,7 +130,7 @@ FILES: DO
 
 !     2.2.2 END OF FILE ENCOUNTED?                                             !
 
-      IF (IEOF) EXIT TIMES   !! END OF FILE ENCOUNTED
+      IF (IEOF) EXIT TIMES   !! END OF FILE ENCOUNTERED
       IF (ITEST.GT.0) THEN
          WRITE (IU06,*) 'SUB. READ_SPECTRA_FILE DONE'
          WRITE (IU06,*) 'NEXT OUTPUT DATE, SPEC_DATE, SPEC_LAT, SPEC_LON: ',   &
@@ -175,8 +176,13 @@ FILES: DO
        END DO LOCATION
 
    END DO TIMES
-
+  
    CLOSE (UNIT=IU01, STATUS='KEEP')   !! CLOSE OLD FILE
+   ELSE
+     NFAIL=NFAIL+1
+     IF(NFAIL.gt.100) EXIT FILES
+   ENDIF
+
    IF (CDATEA.EQ.CDATEE) EXIT FILES   !! ALL DONE?
    IF (IDFILE.GT.0) THEN
       CALL INCDATE (CDTFILE, IDFILE)  !! INCREMENT DATE FOR THE NEXT FILE.
