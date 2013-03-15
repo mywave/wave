@@ -1,29 +1,5 @@
 !
-!	@(#)deutsch.ads 04/01/06 14:21:20 1.4
-! $Log: deutsch.ads,v $
-! Revision 1.9  2005/03/04 09:57:43  frkochw
-! Einbinden von neuronalen Netzen zur Windbestimmung.
-!
-! Revision 1.8  2005/02/02 15:12:46  frkochw
-! Ocean Weather Windverzeichnis.
-!
-! Revision 1.7  2004/10/26 16:03:30  frkochw
-! PolRatio eingefügt.
-!
-! Revision 1.6  2004/10/25 12:52:57  frkochw
-! Voreinstellung für die Landseemaske ist jetzt lokal.
-!
-! Revision 1.5  2004/09/27 12:53:32  frkochw
-! Copyright Notiz eingefügt.
-!
-! Revision 1.4  2004/02/26 08:39:39  frkochw
-! Neue Items im Druckmenue von modell.pro: Scalloping, Farbkodierung und eindeutige Richtungen ncah Wackermann.
-!
-! Revision 1.3  2004/02/18 16:34:14  frkochw
-! Zusätzliche Items für automatische Richtungsfindung.
-!
-! Revision 1.2  2004/01/06 14:03:48  frkochw
-! Übergang auf CVS
+! Übergang auf git
 !
 !
 Copyright:		GKSS SAR-Wind Program WiSAR, COPYRIGHT (C) 2004 BY GKSS\n\nTHIS PROGRAM IS EXPERIMENTAL AND IS PROVIDED "AS IS" WITHOUT\nREPRESENTATION OF WARRANTY OF ANY KIND, EITHER EXPRESS OR\nIMPLIED. THE ENTIRE RISK AS TO THE QUALITY AND PERFORMANCE OF\nTHE PROGRAM IS WITH THE USER.
